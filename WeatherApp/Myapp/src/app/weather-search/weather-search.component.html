@@ -1,0 +1,9 @@
+<p>weather-search works!</p>
+ <form [FormGroup]="form"(ngSubmit)="onSumbit(form)">
+  <label for="city">City</label>
+  <input FormControlName="location" type ="text" id="city"(input)="onSearchLocation(input.value)" required #input>
+  <button type="submit">Add City</button>
+</form>
+<div>
+  <span class="info">City Found:</span> {{data.name}}
+</div>
